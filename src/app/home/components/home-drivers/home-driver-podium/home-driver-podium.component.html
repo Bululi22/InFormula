@@ -1,0 +1,114 @@
+@if (driversChampionship().length) {
+<div class="flex items-center justify-center pb-10">
+  <div class="card w-96 shadow-sm mx-4 mt-6 bg-base-300">
+    <figure class="bg-base-100 h-100">
+      <img
+        [src]="
+          'images/drivers/' +
+          driverImg(
+            driversChampionship()[1].driver.name,
+            driversChampionship()[1].driver.surname
+          )
+        "
+        (error)="imagenSilueta($event)"
+        [alt]="'img' + driversChampionship()[1].driver.surname"
+        class="drop-shadow-xl/50"
+      />
+    </figure>
+    <hr class="border-t-4 border-neutral-300 w-50 m-auto rounded-full" />
+    <div class="card-body p-2">
+      <div
+        class="badge m-auto text-2xl font-bold rounded-[2vw] px-4 h-fit bg-neutral-300 text-black"
+      >
+        2
+      </div>
+      <h2 class="card-title justify-center text-2xl font-bold">
+        {{ driversChampionship()[1].driver.name }}
+        {{ driversChampionship()[1].driver.surname | uppercase }}
+      </h2>
+      <img
+        [src]="driversChampionship()[1].driver.nationality | appFlag"
+        [alt]="driversChampionship()[1].driver.nationality + ' flag'"
+        class="w-6 h-4 rounded-sm m-auto"
+      />
+      <div class="font-bold badge badge-primary m-auto w-fit mb-1 text-white">
+        {{ driversChampionship()[1].points }}p
+      </div>
+    </div>
+  </div>
+
+  <div class="card w-96 shadow-sm mx-4 bg-base-300">
+    <figure class="bg-base-100 h-100">
+      <img
+        [src]="
+          'images/drivers/' +
+          driverImg(
+            driversChampionship()[0].driver.name,
+            driversChampionship()[0].driver.surname
+          )
+        "
+        (error)="imagenSilueta($event)"
+        [alt]="'img' + driversChampionship()[0].driver.surname"
+        class="drop-shadow-xl/50"
+      />
+    </figure>
+    <hr class="border-t-4 border-[#ffd700] w-50 m-auto rounded-full" />
+    <div class="card-body p-2">
+      <div
+        class="badge m-auto text-2xl font-bold rounded-[2vw] px-4 h-fit bg-[#ffd700] text-black"
+      >
+        1
+      </div>
+      <h2 class="card-title justify-center text-2xl font-bold">
+        {{ driversChampionship()[0].driver.name }}
+        {{ driversChampionship()[0].driver.surname | uppercase }}
+      </h2>
+      <img
+        [src]="driversChampionship()[0].driver.nationality | appFlag"
+        [alt]="driversChampionship()[0].driver.nationality + ' flag'"
+        class="w-6 h-4 rounded-sm m-auto"
+      />
+      <div class="font-bold badge badge-primary m-auto w-fit mb-1 text-white">
+        {{ driversChampionship()[0].points }}p
+      </div>
+    </div>
+  </div>
+
+  <div class="card w-96 shadow-sm mx-4 mt-10 bg-base-300">
+    <figure class="bg-base-100 h-100">
+      <img
+        [src]="
+          'images/drivers/' +
+          driverImg(
+            driversChampionship()[2].driver.name,
+            driversChampionship()[2].driver.surname
+          )
+        "
+        (error)="imagenSilueta($event)"
+        [alt]="'img' + driversChampionship()[2].driver.surname"
+        class="drop-shadow-xl/50"
+      />
+    </figure>
+    <hr class="border-t-4 border-[#E97451] w-50 m-auto rounded-full" />
+    <div class="card-body p-2">
+      <div
+        class="badge m-auto text-2xl font-bold rounded-[2vw] px-4 h-fit bg-[#E97451] text-black"
+      >
+        3
+      </div>
+      <h2 class="card-title justify-center text-2xl font-bold">
+        {{ driversChampionship()[2].driver.name }}
+        {{ driversChampionship()[2].driver.surname | uppercase }}
+      </h2>
+      <img
+        [src]="driversChampionship()[2].driver.nationality | appFlag"
+        [alt]="driversChampionship()[2].driver.nationality + ' flag'"
+        class="w-6 h-4 rounded-sm m-auto"
+      />
+      <div class="font-bold badge badge-primary m-auto w-fit mb-1 text-white">
+        {{ driversChampionship()[2].points }}p
+      </div>
+    </div>
+  </div>
+</div>
+}

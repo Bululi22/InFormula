@@ -1,0 +1,70 @@
+@if (constructorsChampionship().length) {
+<div class="p-6 max-w-6xl mx-auto">
+  <!-- Encabezado -->
+  <div class="grid grid-cols-12 gap-2 mb-6">
+    <div class="col-span-1 flex justify-center">
+      <span
+        class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full"
+        >Pos</span
+      >
+    </div>
+    <div class="col-span-1 flex justify-center">
+      <span
+        class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full"
+        >País</span
+      >
+    </div>
+    <div class="col-span-9 flex justify-center">
+      <span
+        class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full"
+        >Equipo</span
+      >
+    </div>
+    <div class="col-span-1 flex justify-center">
+      <span
+        class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full"
+        >Puntos</span
+      >
+    </div>
+  </div>
+
+  <!-- Filas de pilotos -->
+  @for (constructor of constructorsChampionship(); track $index) {
+  <div class="space-y-4 bg mb-3">
+    <!-- Fila ejemplo -->
+    <div
+      class="grid grid-cols-12 items-center gap-2 bg-base-100 rounded-full px-0 py-3"
+    >
+      <!-- Pos -->
+      <div class="col-span-1 flex justify-center">
+        <div
+          class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center font-bold text-lg"
+        >
+          {{ constructor.position }}
+        </div>
+      </div>
+      <!-- País -->
+      <div class="col-span-1 flex justify-center">
+        <img
+          [src]="constructor.team.country | appFlag"
+          [alt]="constructor.team.country + ' flag'"
+          class="w-6 h-4 rounded-sm"
+        />
+      </div>
+      <!-- Equipo -->
+      <div class="col-span-9 text-center text-sm">
+        {{ constructor.team.teamName }}
+      </div>
+      <!-- Puntos -->
+      <div class="col-span-1 flex justify-center">
+        <div
+          class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full"
+        >
+          {{ constructor.points }}
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+}

@@ -1,0 +1,84 @@
+<div class="p-6 max-w-6xl mx-auto">
+  @if (driversChampionship().length) {
+
+  <div class="grid grid-cols-12 gap-2 mb-6">
+    <div class="col-span-1 flex justify-center">
+      <span
+        class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full"
+        >Pos</span
+      >
+    </div>
+    <div class="col-span-1 flex justify-center">
+      <span
+        class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full"
+        >País</span
+      >
+    </div>
+    <div class="col-span-4 flex justify-center">
+      <span
+        class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full"
+        >Piloto</span
+      >
+    </div>
+
+    <div class="col-span-1 flex justify-center"></div>
+    <div class="col-span-4 flex justify-center">
+      <span
+        class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full"
+        >Equipo</span
+      >
+    </div>
+    <div class="col-span-1 flex justify-center">
+      <span
+        class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full"
+        >Puntos</span
+      >
+    </div>
+  </div>
+
+  @for (driver of driversChampionship().slice(3); track $index) {
+  <div class="space-y-4 bg mb-3">
+    <div
+      class="grid grid-cols-12 items-center gap-2 bg-base-100 rounded-full px-0 py-3"
+    >
+      <div class="col-span-1 flex justify-center">
+        <div
+          class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center font-bold text-lg"
+        >
+          {{ driver.position }}
+        </div>
+      </div>
+      <div class="col-span-1 flex justify-center">
+        <img
+          [src]="driver.driver.nationality | appFlag"
+          [alt]="driver.driver.nationality + ' flag'"
+          class="w-6 h-4 rounded-sm"
+        />
+      </div>
+      <div class="col-span-4 text-center text-sm">
+        {{ driver.driver.name }}
+        <strong class="font-bold">
+          {{ driver.driver.surname | uppercase }}
+        </strong>
+      </div>
+      <div class="col-span-1 flex justify-center">
+        <div class="h-10 w-1.5 rounded-3xl bg-white"></div>
+      </div>
+
+      <div
+        class="col-span-4 flex justify-center text-sm text-center break-words"
+      >
+        <p>{{ driver.team.teamName }}</p>
+      </div>
+
+      <div class="col-span-1 flex justify-center">
+        <div
+          class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full"
+        >
+          {{ driver.points }}
+        </div>
+      </div>
+    </div>
+  </div>
+  } }
+</div>
