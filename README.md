@@ -1,59 +1,43 @@
-# F1App
+# InFormula 🚥🏎️
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+InFormula es una aplicación web desarrollada con **Angular 19** que permite a los fanáticos de la Fórmula 1 estar al día con la temporada de manera sencilla y visualmente atractiva.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Características principales
 
-```bash
-ng serve
-```
+- **Datos en tiempo real**  
+  Obtiene información actualizada sobre la siguiente carrera y las clasificaciones de pilotos y equipos desde una API externa no oficial.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Contador regresivo para la próxima carrera**  
+  Visualiza la fecha, hora y ubicación del próximo Gran Premio, con un contador en tiempo real que indica cuánto falta para el inicio.
 
-## Code scaffolding
+- **Clasificación de pilotos y equipos**  
+  Tablas claras y ordenadas que muestran las posiciones actuales, facilitando la consulta rápida de resultados.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 🎨 Diseño y estructura
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Utiliza **Tailwind CSS** junto con **DaisyUI** para un diseño limpio, moderno y consistente, con componentes predefinidos que facilitan la maquetación.
 
-```bash
-ng generate --help
-```
+- Código organizado siguiendo las buenas prácticas y estructura recomendada por Fernando Herrera, con clara separación entre componentes, servicios y modelos para un mantenimiento sencillo.
 
-## Building
+- Actualmente sin versión responsive, pero se planifica adaptar InFormula para que sea 100% responsive en próximas actualizaciones.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🔧 Tecnologías
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Angular 19  
+- Tailwind CSS + DaisyUI  
+- TypeScript  
+- API REST externa (no oficial)
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📅 Próximos pasos
 
-```bash
-ng test
-```
+- Implementar diseño responsive para dispositivos móviles  
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
